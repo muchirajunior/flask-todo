@@ -1,0 +1,39 @@
+{% extends "base.html" %}
+{%  block body %}
+<div class="col s12 m6">
+    <div class="card blue-grey darken-1" style="margin: 20px;" >
+      <div class="card-content white-text">
+        <table class="table striped" >
+            <thead>
+              <tr>
+                  <th>Id</th>
+                  <th>todo</th>
+                  <th>complete</th>
+                  <th>actions</th>
+              </tr>
+            </thead>
+    
+            <tbody>
+                {% for todo in todos %}
+                    <tr>
+                        <td>{{todo.id}}</td>
+                        <td>{{todo.todo}}</td>
+                        <td>{{todo.complete}}</td>
+                        <td>
+                            {% if not todo.complete  %}
+                             <a class="waves-effect waves-light btn"  href="{{url_for('update', id=todo.id)}}">complete</a>
+                            {% endif %}
+                            <a class="waves-effect waves-light btn" href="{{url_for('delete', id=todo.id)}}" >delete</a>
+                        </td>
+
+                    </tr>
+               {% endfor %}
+             
+            </tbody>
+          </table>
+        
+      </div>
+     
+    </div>
+  </div>
+{%  endblock %}
