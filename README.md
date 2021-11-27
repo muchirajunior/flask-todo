@@ -1,7 +1,12 @@
-#GDSE FLASK PYTHON
-------------------
+#GDSC FLASK PYTHON TODO APPLICATION
+----------------------------------
 
-run 
+install the packages
+---------------------
  $ pip install flask
  $ pip install flask_sqlalchemy
+
+
+run the application
+----------------------
  $ python app.py
