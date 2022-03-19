@@ -19,8 +19,11 @@
 <body>
     <nav>
         <div class="nav-wrapper brown lighten-2">
-          <a href="#" class="brand-logo center">{{page}}</a>
-          
+          <a href="{{url_for('index')}}" class="brand-logo center">{{page}}</a>
+          <ul id="nav-mobile" class="right hide-on-med-and-down">
+            <li><a href="{{url_for('index')}}">Home</a></li>
+            <li><a href="{{url_for('addtodo')}}">Add Todo</a></li>
+          </ul>
         </div>
       </nav>
     {%  block body %}
